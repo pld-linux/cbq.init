@@ -8,9 +8,11 @@ Group:		Networking/Utilities
 Source0:	http://dl.sourceforge.net/cbqinit/%{name}-v%{version}
 # Source0-md5:	f58368ae779f32acbbf1aeaa4e28b4c5
 URL:		http://www.sourceforge.net/projects/cbqinit/
+PreReq:		rc-scripts
+Requires(post,preun):	/sbin/chkconfig
 Requires:	iproute2
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 BuildArch:	noarch
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 CBQ.init is a simple shell script for setting up a smart ethernet
