@@ -1,12 +1,12 @@
 Summary:	Shell script for setting up CBQ
 Summary(pl):	Skrypt umo¿liwiaj±cy prost± konfiguracjê CBQ
 Name:		cbq.init
-Version:	0.7.2
+Version:	0.7.3
 Release:	0.1
 License:	GPL v2+
 Group:		Networking/Utilities
 Source0:	http://dl.sourceforge.net/cbqinit/%{name}-v%{version}
-# Source0-md5:	f58368ae779f32acbbf1aeaa4e28b4c5
+# Source0-md5:	c319f136059aadf7b3f0a38a12f3f3e0
 URL:		http://www.sourceforge.net/projects/cbqinit/
 PreReq:		rc-scripts
 Requires(post,preun):	/sbin/chkconfig
