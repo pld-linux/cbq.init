@@ -1,12 +1,12 @@
 Summary:	Shell script for setting up CBQ
 Summary(pl):	Skrypt umo¿liwiaj±cy prost± konfiguracjê CBQ
 Name:		cbq.init
-Version:	0.6.2
+Version:	0.7.2
 Release:	0.1
-License:	GPL
+License:	GPL v2+
 Group:		Networking/Utilities
-Source0:	ftp://ftp.lj.pl/pub/linux/%{name}-%{version}.tar.gz
-URL:		ftp://ftp.equinox.gu.net/pub/linux/cbq/
+Source0:	http://dl.sourceforge.net/cbqinit/%{name}-v%{version}
+URL:		http://www.sourceforge.net/projects/cbqinit/
 Requires:	iproute2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 BuildArch:	noarch
@@ -20,13 +20,12 @@ CBQ.init jest prostym skryptem umo¿liwiaj±cym konfiguracjê CBQ w
 Linuksie 2.2 i 2.4.
 
 %prep
-%setup  -q
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{/etc/rc.d/init.d,/etc/sysconfig/cbq}
 
-install %{name}-v%{version} $RPM_BUILD_ROOT/etc/rc.d/init.d/%{name}
+install %{SOURCE0} $RPM_BUILD_ROOT/etc/rc.d/init.d/%{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -41,6 +40,5 @@ fi
 
 %files
 %defattr(644,root,root,755)
-%doc README doc/*
 %attr(754,root,root) /etc/rc.d/init.d/%{name}
-/etc/sysconfig/cbq
+%dir /etc/sysconfig/cbq
