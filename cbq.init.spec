@@ -28,8 +28,6 @@ install -d $RPM_BUILD_ROOT{%{_sysconfdir}/rc.d/init.d,%{_sysconfdir}/sysconfig/c
 
 install %{name}-v%{version} $RPM_BUILD_ROOT%{_sysconfdir}/rc.d/init.d/%{name}
 
-gzip -9nf README
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -43,6 +41,6 @@ fi
 
 %files
 %defattr(644,root,root,755)
-%doc README.gz doc/*
+%doc README doc/*
 %attr(754,root,root) %{_sysconfdir}/rc.d/init.d/%{name}
 %{_sysconfdir}/sysconfig/cbq
