@@ -34,6 +34,9 @@ install %{name}-v%{version} $RPM_BUILD_ROOT%{_sysconfdir}/rc.d/init.d/%{name}
 
 gzip -9nf README
 
+%clean
+rm -rf $RPM_BUILD_ROOT
+
 %post
 /sbin/chkconfig --add cbq.init
 
@@ -42,9 +45,6 @@ if [ "$1" = "0" ]; then
 	/sbin/chkconfig --del cbq.init
 fi
 	
-%clean
-rm -rf $RPM_BUILD_ROOT
-
 %files
 %defattr(644,root,root,755)
 %doc README.gz doc/*
