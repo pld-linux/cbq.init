@@ -1,5 +1,5 @@
 Summary:	Shell script for setting up CBQ
-Summary(pl.UTF-8):   Skrypt umożliwiający prostą konfigurację CBQ
+Summary(pl.UTF-8):	Skrypt umożliwiający prostą konfigurację CBQ
 Name:		cbq.init
 Version:	0.7.3
 Release:	0.1
