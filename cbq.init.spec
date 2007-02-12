@@ -1,5 +1,5 @@
 Summary:	Shell script for setting up CBQ
-Summary(pl):	Skrypt umo¿liwiaj±cy prost± konfiguracjê CBQ
+Summary(pl.UTF-8):   Skrypt umoÅ¼liwiajÄ…cy prostÄ… konfiguracjÄ™ CBQ
 Name:		cbq.init
 Version:	0.7.3
 Release:	0.1
@@ -18,8 +18,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 CBQ.init is a simple shell script for setting up a smart ethernet
 shaper based on CBQ (Class Based Queueing) for Linux 2.2 and 2.4.
 
-%description -l pl
-CBQ.init jest prostym skryptem umo¿liwiaj±cym konfiguracjê CBQ w
+%description -l pl.UTF-8
+CBQ.init jest prostym skryptem umoÅ¼liwiajÄ…cym konfiguracjÄ™ CBQ w
 Linuksie 2.2 i 2.4.
 
 %prep
